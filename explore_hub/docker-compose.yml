@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: explorehubdb
+      POSTGRES_USER: suadmin
+      POSTGRES_PASSWORD: suadmin321
+    networks:
+      - djangonetwork
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    depends_on:
+      - db
+    links: 
+      - db:db
+    networks:
+      - djangonetwork
+
+volumes:
+  postgres_data:
+
+networks:
+  djangonetwork:
+    driver: bridge

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block page_title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="position: relative">
+    <div class="d-flex flex-column p-3 text-white bg-dark" style="width: 280px; height: 100vh; position: absolute; top: 0; left: 0; z-index: 1000;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <span class="fs-6">List of items</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">
+              Accomodations
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              Gyms
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              Restaurants
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              Monuments
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              After Schools
+            </a>
+          </li>
+        </ul>
+        <hr>
+      </div>
+
+    <nav class="py-2 bg-dark border-bottom" style="z-index: 500;">
+        <div class="container d-flex flex-wrap">
+          <ul class="nav me-auto">
+            <li class="nav-item"><a href="#" class="nav-link link-light px-2 active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-light px-2">Account</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-light px-2">Suggestions</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-light px-2">About Us</a></li>
+          </ul>
+          <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link link-light px-2">Login</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-light px-2">Sign up</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <header class="py-3 mb-4 border-bottom" style="z-index: 400; background-color: #343a40;">
+        <div class="container d-flex flex-wrap justify-content-center">
+          <a class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-light text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Explore Hub</span>
+          </a>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0">
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+          </form>
+        </div>
+      </header>
+
+    {% block content %}{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
